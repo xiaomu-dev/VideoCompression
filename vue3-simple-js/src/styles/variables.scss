@@ -1,0 +1,61 @@
+// 全局变量
+
+// 布局
+$Layout_Header_Height: 50px; // 头部高度
+$Layout_Header_Item_Size: 40px; // 头部项大小
+$Layout_NavTab_Height: 40px; // 标签栏高度
+
+// 阴影
+$Shadow_Base: rgba(0, 0, 0, 0.1);
+
+// 颜色
+$primary-color: #409eff;
+$success-color: #67c23a;
+$warning-color: #e6a23c;
+$danger-color: #f56c6c;
+$info-color: #909399;
+$white-color: #ffffff;
+$black-color: #000000;
+
+// 字体大小
+$font-size-base: 14px;
+$font-size-lg: 16px;
+$font-size-sm: 12px;
+
+// 字体颜色
+$font-color-base: #303133;
+$font-color-regular: #606266;
+$font-color-secondary: #909399;
+$font-color-placeholder: #a8abb2;
+$font-color-disabled: #c0c4cc;
+
+// 边框颜色
+$border-color-darker: #cdd0d6;
+$border-color-dark: #d4d7de;
+$border-color-base: #dcdfe6;
+$border-color-light: #e4e7ed;
+$border-color-extra-light: #f2f6fc;
+
+// 填充颜色
+$fill-color-darker: #e6e8eb;
+$fill-color-dark: #ebedf0;
+$fill-color-base: #f0f2f5;
+$fill-color-light: #f5f7fa;
+$fill-color-lighter: #fafafa;
+$fill-color-extra-light: #fafcff;
+$fill-color-blank: #ffffff;
+
+// 背景颜色
+$background-page: #f2f3f5;
+$background-base: #ffffff;
+$background-overlay: #ffffff;
+
+// 间距
+$spacing-base: 8px;
+$spacing-lg: 16px;
+$spacing-sm: 4px;
+
+// 其他
+$border-radius-base: 4px;
+$border-radius-sm: 2px;
+$border-radius-lg: 8px;

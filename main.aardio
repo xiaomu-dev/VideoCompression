@@ -1,0 +1,49 @@
+import win.ui;
+/*DSG{{*/
+mainForm = win.form(text="CountDown";right=499;bottom=279;bgcolor=0xFFFFFF;border="none";clipch=1;mode="popup";sysmenu=false;title=false)
+mainForm.add()
+/*}}*/
+
+// 引入web
+import web.view;
+var wb = web.view(mainForm);
+wb.transparent = true; // 透明背景
+
+// 创建圆角无边框窗口
+import win.region.round;
+win.region.round(mainForm,,,20,20); // 设置圆角半径为20
+
+
+// 导出给网页调用的js方法, 需在wb.go之前
+wb.external = {
+	win_close = function() {
+		mainForm.close();
+	};
+	win_move = function() {
+		mainForm.hitCaption();
+	};
+	win_min = function() {
+		mainForm.hitMin();
+	};
+	win_max = function() {
+		return mainForm.hitMax();
+	};
+	win_top = function(flag) {
+		win.setTopmost(mainForm.hwnd, flag); // 置顶窗口
+	};
+	win_active = function(flag) {
+		win.setForeground(mainForm.hwnd); // 显示到前台
+	};
+	win_restore = function(flag) {
+		win.show(mainForm.hwnd); // 自最大化或最小化恢复显示
+	};
+}
+
+// 启动一个本地服务器
+import wsock.tcp.simpleHttpServer;
+wb.go("/res/index.html"); // 需要 => 资源文件 => 属性 => 本地构建 => ture
+
+
+// 启动程序
+mainForm.show();
+return win.loopMessage();

@@ -1,0 +1,98 @@
+.XmScroll {
+	overflow: auto;
+
+	/* 给内容预留右侧和底部空隙 */
+	padding-right: 3px; /* 垂直滚动条方向的空隙 */
+	padding-bottom: 3px; /* 水平滚动条方向的空隙 */
+
+	--XmScrollWidth: 6px; /* 滚动条宽度 */
+	--XmScrollWidthHalf: 3px; /* 滚动条宽度一半 */
+	--XmScrollColor: #dddee0; /* 滑块默认颜色 */
+	--XmScrollColorLight: #c7c9cc; /* 滑块高亮颜色 */
+	--XmScrollColorBg: transparent; /* 滚动条背景色 */
+	--XmScrollColorBtn: transparent; /* 滚动条按钮颜色 */
+	--XmScrollColorBtnLight: #e0e0e0; /* 滚动条按钮高亮颜色 */
+
+	/* 滚动条容器 (整体) - 垂直滚动条宽度/水平滚动条高度 */
+	&::-webkit-scrollbar {
+		width: var(--XmScrollWidth); /*垂直滚动条宽度*/
+		height: var(--XmScrollWidth); /*水平滚动条高度*/
+		background-color: var(--XmScrollColorBg); /*滚动条背景色(轨道外区域)*/
+		border-radius: var(--XmScrollWidthHalf); /* 滚动条整体圆角 */
+	}
+
+	/* 滚动条轨道 (滑块滑动的区域) */
+	&::-webkit-scrollbar-track {
+		background-color: var(--XmScrollColorBg); /* 轨道背景色 */
+		border-radius: var(--XmScrollWidthHalf); /* 轨道圆角 */
+		margin: 0; /* 轨道与容器边缘的间距 (垂直滚动条上下/水平左右) */
+		// box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1); /* 轨道内阴影 */
+	}
+
+	/* 滚动条轨道片段 (轨道中滑块未覆盖的部分，通常与track样式一致) */
+	&::-webkit-scrollbar-track-piece {
+		background-color: transparent; /* 继承track的背景，避免冲突 */
+	}
+
+	/* 滚动条滑块 (可拖动的部分) */
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--XmScrollColor); /* 滑块默认颜色 */
+		border-radius: var(--XmScrollWidthHalf); /* 滑块圆角 */
+		background-clip: padding-box; /* 确保背景色不溢出边框 */
+		cursor: pointer; /* 鼠标悬停时的光标样式 */
+		// border: 1px solid transparent; /* 滑块边框 (可选) */
+		// box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* 滑块阴影 */
+	}
+
+	/* 滑块hover状态 (鼠标悬停时) */
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: var(--XmScrollColorLight); /* hover时加深颜色 */
+		// box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+	}
+
+	/* 滑块active状态 (鼠标点击拖动时) */
+	&::-webkit-scrollbar-thumb:active {
+		background-color: var(--XmScrollColorLight); /* active时更深颜色 */
+		// box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* 点击时阴影 */
+	}
+
+	/* 滚动条两端的按钮 (上下箭头/左右箭头) */
+	&::-webkit-scrollbar-button {
+		width: 0; /* 隐藏按钮 (默认箭头不好看，通常隐藏) */
+		height: 0;
+		background-color: var(--XmScrollColorBtn); /* 按钮背景色 */
+	}
+
+	/* 垂直滚动条的上按钮 (hover状态，如需显示可调整宽高) */
+	&::-webkit-scrollbar-button:vertical:start:hover {
+		background-color: var(--XmScrollColorBtnLight);
+	}
+
+	/* 垂直滚动条的下按钮 (hover状态) */
+	&::-webkit-scrollbar-button:vertical:end:hover {
+		background-color: var(--XmScrollColorBtnLight);
+	}
+
+	/* 水平滚动条的左按钮 (hover状态) */
+	&::-webkit-scrollbar-button:horizontal:start:hover {
+		background-color: var(--XmScrollColorBtnLight);
+	}
+
+	/* 水平滚动条的右按钮 (hover状态) */
+	&::-webkit-scrollbar-button:horizontal:end:hover {
+		background-color: var(--XmScrollColorBtnLight);
+	}
+
+	/* 滚动条角落 (垂直和水平滚动条交汇处) */
+	&::-webkit-scrollbar-corner {
+		background-color: var(--XmScrollColorBg); /* 角落背景色 */
+		border-radius: 0 0 var(--XmScrollWidthHalf) 0; /* 角落圆角 (与滚动条呼应) */
+	}
+
+	/* -------------- Firefox 兼容样式 -------------- */
+	/* Firefox 不支持webkit伪元素，仅支持以下两个属性 */
+	.scrollbar-container {
+		scrollbar-width: thin; /* 滚动条宽度：auto/thin/none */
+		scrollbar-color: var(--XmScrollColor) var(--XmScrollColorBg); /* 滑块颜色 轨道颜色 */
+	}
+}

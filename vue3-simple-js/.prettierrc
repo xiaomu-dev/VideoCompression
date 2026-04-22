@@ -1,0 +1,25 @@
+{
+	"printWidth": 200,
+	"overrides": [
+		{
+			"files": ".prettierrc",
+			"options": { "parser": "json" }
+		}
+	],
+	"tabWidth": 2,
+	"useTabs": true,
+	"semi": true,
+	"singleQuote": true,
+	"proseWrap": "preserve",
+	"arrowParens": "avoid",
+	"bracketSpacing": true,
+	"eslintIntegration": false,
+	"jsxBracketSameLine": false,
+	"jsxSingleQuote": false,
+	"trailingComma": "es5",
+	"prettier.tslintIntegration": false,
+	"vueIndentScriptAndStyle": true,
+	"rules": {
+		"no-empty-source": true
+	}
+}

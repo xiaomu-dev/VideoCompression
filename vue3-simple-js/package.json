@@ -1,0 +1,28 @@
+{
+	"name": "vue3-simple-js",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@element-plus/icons-vue": "^2.3.2",
+		"element-plus": "^2.13.3",
+		"@vueuse/core": "^14.2.1",
+		"klona": "^2.0.6",
+		"normalize.css": "^8.0.1",
+		"pinia": "^3.0.2",
+		"vue": "^3.5.13",
+		"vue-router": "^4.0.13"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^5.2.3",
+		"sass": "^1.88.0",
+		"unplugin-auto-import": "^21.0.0",
+		"unplugin-vue-components": "^31.0.0",
+		"vite": "^6.3.5"
+	}
+}

@@ -1,0 +1,12 @@
+@use './theme.scss';
+@use './transition.scss';
+@use './XmScroll.scss';
+
+@use './element-plus.scss';
+
+@use './common.scss';
+
+// 灰色模式
+.html-grey {
+	filter: grayscale(100%);
+}

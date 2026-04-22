@@ -1,0 +1,154 @@
+.el-main .el-scrollbar__view {
+	height: 100%;
+}
+
+// 表单内元素
+.el-form,
+.el-col {
+	.el-select,
+	.el-cascader,
+	.el-date-editor,
+	.el-form-item {
+		width: 100%;
+		box-sizing: border-box;
+		.el-form-item__label {
+			font-weight: 600;
+		}
+	}
+}
+
+// 抽屉
+.el-drawer {
+	.el-drawer__header {
+		margin: 0;
+		padding: 10px 15px;
+		letter-spacing: 2px;
+		border-bottom: 1px solid var(--el-border-color);
+		background-color: var(--el-color-primary);
+		color: var(--el-color-white);
+	}
+	.el-drawer__body {
+		padding: 0 15px;
+		display: flex;
+		flex-direction: column;
+	}
+	.el-drawer__footer {
+		margin: 0;
+		padding: 10px 15px;
+	}
+}
+
+// 按钮
+.el-button {
+	padding: 0 10px !important;
+	& + .el-button {
+		margin-left: 10px !important;
+	}
+}
+
+// 卡片 - 默认 - 改flex布局
+.el-card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 6px;
+	.el-card__header {
+		padding: 10px 15px;
+		font-weight: bold;
+		font-size: 1.2em;
+		line-height: 1.5em;
+	}
+	.el-card__body {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding: 15px;
+	}
+}
+// 卡片 - body无样式 - 可以滚动
+.XmCard {
+	.el-card__body {
+		padding: 0px;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+}
+
+// 树
+.el-tree {
+	.el-tree-node.is-current {
+		color: var(--el-color-primary);
+	}
+}
+
+// 标签页
+.el-tabs {
+	height: 100%;
+	.el-tab-pane {
+		height: 100%;
+	}
+}
+
+// 穿梭框
+.el-transfer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.el-transfer__buttons {
+		padding: 0 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.el-button + .el-button {
+			margin-top: 10px !important;
+			margin-left: 0px !important;
+		}
+	}
+
+	.el-transfer-panel {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		.el-transfer-panel__body {
+			flex: 1;
+		}
+	}
+}
+
+// 数字输入框
+.el-input-number {
+	width: 100%;
+}
+
+// 手风琴 - 默认 - 改为圆角卡片风格
+.el-collapse {
+	border: 1px solid var(--el-border-color-light);
+	overflow: hidden;
+	border-radius: 6px;
+	.el-collapse-item__header {
+		padding: 10px 15px;
+		box-sizing: border-box;
+		line-height: 1.5em;
+		min-height: 1.5em;
+		.el-collapse-item__title {
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+		&.is-active {
+			border-bottom: 1px solid var(--el-border-color-light);
+			color: var(--el-collapse-header-text-color);
+		}
+	}
+	.el-collapse-item__wrap {
+		padding: 15px;
+	}
+}
+
+.miniBtn.add {
+	.el-icon {
+		transform: rotate(45deg);
+	}
+}
