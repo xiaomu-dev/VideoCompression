@@ -33,5 +33,14 @@ export default defineConfig({
 			scss: { additionalData: `@use '@/styles/variables.scss' as *;` },
 		},
 	},
-	server: { host: true, port: 9527, open: true },
+	server: {
+		host: true,
+		port: 9527,
+		open: true,
+		// 解决 SharedArrayBuffer 跨域问题
+		headers: { 'Cross-Origin-Opener-Policy': 'same-origin', 'Cross-Origin-Embedder-Policy': 'require-corp' },
+	},
+	optimizeDeps: {
+		exclude: ['@ffmpeg/ffmpeg', '@ffmpeg/core', '@ffmpeg/util'], // 优化 FFmpeg 加载
+	},
 });
