@@ -17,6 +17,12 @@
 1. 下载 Release 发布包
 2. 直接解压运行 exe 程序即可使用
 
+## 🙏 感谢
+本项目依赖以下优秀开源项目，在此表示感谢：
+- [aardio](https://www.aardio.com/) - 高效桌面开发工具
+- [Vue](https://vuejs.org/) - 渐进式前端框架
+- [FFmpeg](https://ffmpeg.org/) - 强大的音视频处理工具
+
 ## ⚠️ 重要使用声明
 **本工具仅用于处理自身拥有合法版权、合法使用权的视频文件。**
 
@@ -48,12 +54,6 @@
 
 ### 衍生项目约束
 基于本项目二次修改、开源分发的衍生作品，**必须沿用本相同协议（CC BY-NC-SA 4.0）**，不得放宽商用限制。
-
-## 🙏 感谢开源库
-本项目依赖以下优秀开源项目，在此表示感谢：
-- [aardio](https://www.aardio.com/) - 高效桌面开发工具
-- [Vue](https://vuejs.org/) - 渐进式前端框架
-- [FFmpeg](https://ffmpeg.org/) - 强大的音视频处理工具
 
 [cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-shield]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
